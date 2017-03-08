@@ -34,8 +34,18 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/">Home</a>
-            </div>
 
+            </div>
+            {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'post_new' %}" class="top-menu">Add</a>
+                    </li>
+
+                </ul>
+            </div>
+            {% endif %}
 
         </div>
         <!-- /.container -->
