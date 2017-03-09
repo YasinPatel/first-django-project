@@ -1,0 +1,131 @@
+label.login-custom-error
+{
+    color: red;
+    padding-bottom: 5px;
+    font-weight:normal;
+}
+
+.errorlist
+{
+    list-style: none;
+    padding: 0px;
+    color:red;
+}
+
+.box-header,
+.box-body,
+.box-footer{
+    padding: 15px;
+}
+.box-header>.box-tools{
+    top: 10px;
+}
+.box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title{
+    font-size: 22px;
+}
+.margin-l-5{
+    margin-left: 5px;
+}
+.margin-l-10{
+    margin-left: 10px;
+}
+.margin-r-10{
+    margin-right: 10px;
+}
+.filter-bottom-margin{
+    margin-bottom: 15px;
+}
+
+.content-header>.breadcrumb{
+    float: none;
+    position: initial;
+}
+
+#changelist-filter .dropdown-menu .dropdown-header{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#changelist-filter .dropdown-menu>li>a:hover,
+#changelist-filter .dropdown-menu>.active>a,
+#changelist-filter .dropdown-menu>.active>a:focus,
+#changelist-filter .dropdown-menu>.active>a:hover{
+    color: #333;
+    background-color: #f4f4f4;    
+}
+
+
+/* ================================================================
+    Buttons
+=================================================================== */
+
+.btn .caret{
+    margin-left: 5px;
+}
+.btn .btn-icon{
+    margin-right: 5px;
+}
+.buttons-set{
+    white-space: nowrap;
+}
+.btn-icon-only{
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    padding: 0px;
+    font-size: 12px;    
+}
+.btn-social>:first-child{
+    font-size: 1em;
+}
+
+
+.icheckbox label,
+.iradio label{
+    padding-left: 0px;
+}
+.icheckbox label > div,
+.iradio label > div{
+    margin-right: 5px;
+}
+
+.form-control,
+.input-group .input-group-addon,
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single,
+.select2-container--default .select2-selection--multiple{
+    border-radius: 4px;
+}
+.input-group .form-control:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;    
+}
+.input-group-addon:last-child{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0    
+}
+
+.pagination-table{
+    line-height: 30px;
+}
+
+
+.table-field-actions, .field-action_column{
+    width: 120px;
+    text-align: center;
+}
+.table-field-status, .field-status_column{
+    width: 120px;
+    text-align: center;    
+}
+.label-block{
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    padding: .428em .6em .429em;
+    max-width: 90px;
+    margin: 0 auto;
+}
