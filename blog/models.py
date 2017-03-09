@@ -2,10 +2,11 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from helpers.models import BaseModel
 # Create your models here.
 
 
-class Post(models.Model):
+class Post(BaseModel):
     author =models.ForeignKey('auth.User')
     title=models.CharField(max_length=200)
     text=models.TextField()

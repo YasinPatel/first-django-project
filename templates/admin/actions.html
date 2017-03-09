@@ -1,15 +1,37 @@
 {% load i18n %}
-<div class="actions">
-    {% for field in action_form %}{% if field.label %}<label>{{ field.label }} {% endif %}{{ field }}{% if field.label %}</label>{% endif %}{% endfor %}
-    <button type="submit" class="button" title="{% trans "Run the selected action" %}" name="index" value="{{ action_index|default:0 }}">{% trans "Go" %}</button>
-    {% if actions_selection_counter %}
-        <span class="action-counter" data-actions-icnt="{{ cl.result_list|length }}">{{ selection_note }}</span>
-        {% if cl.result_count != cl.result_list|length %}
-        <span class="all">{{ selection_note_all }}</span>
-        <span class="question">
-            <a href="#" title="{% trans "Click here to select the objects across all pages" %}">{% blocktrans with cl.result_count as total_count %}Select all {{ total_count }} {{ module_name }}{% endblocktrans %}</a>
-        </span>
-        <span class="clear"><a href="#">{% trans "Clear selection" %}</a></span>
+{% load widget_tweaks %}
+
+    <div class="actions pull-left filter-bottom-margin">
+        <div class=" form-inline">
+            <label class="margin-r-5">Actions</label>
+                <!--{% if field.label %}-->
+                <!--    <label>-->
+                <!--        {{ field.label }}-->
+                <!--    </label>-->
+                <!--{% endif %}    -->
+            <div class="input-group margin-r-5">
+                {% for field in action_form %}
+                        {{ field|add_class:"form-control" }}
+                            {% if field.label %}
+                        {% endif %}
+
+                {% endfor %}
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default" title="{% trans "Run the selected action" %}" name="index" value="{{ action_index|default:0 }}">{% trans "Go" %}</button>
+                </div>
+            </div>
+
+        {% if actions_selection_counter %}
+            <span class="action-counter" data-actions-icnt="{{ cl.result_list|length }}">{{ selection_note }}</span>
+            <!--{% if cl.result_count != cl.result_list|length %}-->
+            <!--<span class="all">{{ selection_note_all }}</span>-->
+            <!--<span class="question">-->
+            <!--    <a href="#" title="{% trans "Click here to select the objects across all pages" %}">{% blocktrans with cl.result_count as total_count %}Select all {{ total_count }} {{ module_name }}{% endblocktrans %}</a>-->
+            <!--</span>-->
+            <!--<span class="clear">-->
+            <!--    <a href="#">{% trans "Clear selection" %}</a>-->
+            <!--</span>-->
+            <!--{% endif %}-->
         {% endif %}
-    {% endif %}
-</div>
+        </div>
+    </div>
